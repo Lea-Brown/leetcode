@@ -36,10 +36,10 @@ n == accounts[i].length
 */
 
 var maximumWealth = function (accounts) {
-    let highest = 0;
-    for (let i = 0; i < accounts.length; i++) {
-        let test = accounts[i].reduce((acc, add) => acc + add)
-        if (test > highest) highest = test
-    }
-    return highest
+  let highest = 0;
+  for (let i = 0; i < accounts.length; i++) {
+    let test = accounts[i].reduce((acc, add) => acc + add);
+    if (test > highest) highest = test;
+  }
+  return highest;
 };

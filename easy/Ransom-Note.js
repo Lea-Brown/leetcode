@@ -27,14 +27,17 @@ ransomNote and magazine consist of lowercase English letters.
 */
 
 var canConstruct = function (ransomNote, magazine) {
-    let result = [];
-    let rn = ransomNote.split('').sort()
-    let m = magazine.split('').sort()
-    for (let i = 0; i < ransomNote.length; i++) {
-        if (m.includes(rn[i])) {
-            result.push(m.find(x => x == rn[i]))
-            m.splice(m.findIndex(x => x == rn[i]), 1)
-        }
+  let result = [];
+  let rn = ransomNote.split('').sort();
+  let m = magazine.split('').sort();
+  for (let i = 0; i < ransomNote.length; i++) {
+    if (m.includes(rn[i])) {
+      result.push(m.find(x => x == rn[i]));
+      m.splice(
+        m.findIndex(x => x == rn[i]),
+        1
+      );
     }
-    return result.length == ransomNote.length
+  }
+  return result.length == ransomNote.length;
 };
