@@ -29,6 +29,6 @@ args is a valid JSON array
 0 <= args.length <= 100
 */
 
-var argumentsLength = function (...args) {
+function argumentsLength(...args) {
   return args.length;
-};
+}
