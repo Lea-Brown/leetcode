@@ -1,6 +1,6 @@
 /* 2666. Allow One Function Call
 
-https://leetcode.com/problems/allow-one-function-call/description/?envType=study-plan-v2&envId=30-days-of-javascript
+https://leetcode.com/problems/allow-one-function-call/description/
 
 Given a function fn, return a new function that is identical to the original function except that it ensures fn is called at most once.
 

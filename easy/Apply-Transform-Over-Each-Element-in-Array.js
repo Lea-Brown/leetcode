@@ -1,6 +1,6 @@
 /* 2635. Apply Transform Over Each Element in Array
 
-https://leetcode.com/problems/apply-transform-over-each-element-in-array/description/?envType=study-plan-v2&envId=30-days-of-javascript
+https://leetcode.com/problems/apply-transform-over-each-element-in-array/description/
 
 Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
 
