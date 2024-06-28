@@ -1,6 +1,6 @@
 /* 2665. Counter II
 
-https://leetcode.com/problems/counter-ii/description/?envType=study-plan-v2&envId=30-days-of-javascript
+https://leetcode.com/problems/counter-ii/description/
 
 Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
 
