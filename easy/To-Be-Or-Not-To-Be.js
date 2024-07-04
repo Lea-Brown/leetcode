@@ -1,6 +1,6 @@
 /* 2704. To Be Or Not To Be
 
-https://leetcode.com/problems/to-be-or-not-to-be/description/?envType=study-plan-v2&envId=30-days-of-javascript
+https://leetcode.com/problems/to-be-or-not-to-be/description/
 
 Write a function expect that helps developers test their code. It should take in any value val and return an object with the following two functions.
 
