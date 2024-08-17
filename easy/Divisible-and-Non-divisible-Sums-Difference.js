@@ -38,11 +38,21 @@ Constraints:
 1 <= n, m <= 1000
 */
 
+// first attempt
 function differenceOfSums(n, m) {
   let result = 0;
   const array = Array.from({ length: n }, (_, i) => i + 1);
   array.forEach((e) => {
     e % m == 0 ? (result -= e) : (result += e);
   });
+  return result;
+}
+
+// second
+function differenceOfSums(n, m) {
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    i % m == 0 ? (result -= i) : (result += i);
+  }
   return result;
 }
