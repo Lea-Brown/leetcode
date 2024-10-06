@@ -39,3 +39,12 @@ function separateDigits(nums) {
   }
   return result;
 }
+
+// playing around with map
+function separateDigits(nums) {
+  return nums
+    .map((e) => e.toString())
+    .join("")
+    .split("")
+    .map((e) => +e);
+}
