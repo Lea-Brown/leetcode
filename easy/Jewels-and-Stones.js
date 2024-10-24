@@ -23,3 +23,16 @@ All the characters of jewels are unique.
 function numJewelsInStones(jewels, stones) {
   return [...stones].filter((e) => [...jewels].includes(e)).length;
 }
+
+// trying out objects more
+function numJewelsInStones(jewels, stones) {
+  let count = 0;
+  const map = {};
+  for (const stone of stones) {
+    map[stone] = (map[stone] || 0) + 1;
+  }
+  for (const jewel of jewels) {
+    count += map[jewel] || 0;
+  }
+  return count;
+}
