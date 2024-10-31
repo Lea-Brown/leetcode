@@ -23,6 +23,7 @@ Constraints:
 
 function containsDuplicate(nums) {
   return [...new Set(nums)].length !== nums.length;
+  // new Set(nums).size != nums.length;
 }
 
 // using hash map
