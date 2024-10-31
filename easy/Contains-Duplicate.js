@@ -24,3 +24,13 @@ Constraints:
 function containsDuplicate(nums) {
   return [...new Set(nums)].length !== nums.length;
 }
+
+// using hash map
+function containsDuplicate(nums) {
+  let obj = {};
+  for (const num of nums) {
+    obj[num] = obj[num] + 1 || 1;
+    if (obj[num] == 2) return true;
+  }
+  return false;
+}
