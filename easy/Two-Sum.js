@@ -43,3 +43,16 @@ function twoSum(nums, target) {
   }
   return [];
 }
+
+// my attemp
+function twoSum(nums, target) {
+  const obj = {};
+  for (let i = 0; i < nums.length; i++) {
+    const curNum = nums[i];
+    const checkFor = target - curNum;
+    if (checkFor in obj) {
+      return [obj[checkFor], i];
+    }
+    obj[curNum] = i;
+  }
+}
