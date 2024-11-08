@@ -31,3 +31,16 @@ function addDigits(num) {
   }
   return num;
 }
+
+// working on recursion
+function addDigits(num) {
+  if (num < 10) {
+    return num;
+  } else {
+    const newNum = num
+      .toString()
+      .split("")
+      .reduce((acc, add) => +acc + +add, 0);
+    return addDigits(newNum);
+  }
+}
