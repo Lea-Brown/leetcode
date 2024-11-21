@@ -22,6 +22,6 @@ Constraints:
 1 <= millis <= 1000
 */
 
-async function sleep(millis) {
+async function sleep(millis: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, millis));
 }
