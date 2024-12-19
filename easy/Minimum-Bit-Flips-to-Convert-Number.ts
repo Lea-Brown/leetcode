@@ -40,6 +40,5 @@ function minBitFlips(start: number, goal: number): number {
   for (let i = 0; i < longest; i++) {
     if (binaryStart[i] != binaryGoal[i]) count++;
   }
-  console.log(binaryStart, binaryGoal);
   return count;
 }
