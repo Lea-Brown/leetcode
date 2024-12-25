@@ -29,6 +29,7 @@ Constraints:
 The given dates are guaranteed to be valid, so no error handling is necessary.
 */
 
+// some christmas day learning
 function reformatDate(date: string): string {
   const dateArr = date.split(" ");
   const months = [
