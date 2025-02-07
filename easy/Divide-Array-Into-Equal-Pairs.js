@@ -1,40 +1,37 @@
-/* 2206. Divide Array Into Equal Pairs
-
-https://leetcode.com/problems/divide-array-into-equal-pairs/
-
-You are given an integer array nums consisting of 2 * n integers.
-
-You need to divide nums into n pairs such that:
-
-Each element belongs to exactly one pair.
-The elements present in a pair are equal.
-Return true if nums can be divided into n pairs, otherwise return false.
-
-Example 1:
-Input: nums = [3,2,3,2,2,2]
-Output: true
-Explanation: 
-There are 6 elements in nums, so they should be divided into 6 / 2 = 3 pairs.
-If nums is divided into the pairs (2, 2), (3, 3), and (2, 2), it will satisfy all the conditions.
-
-Example 2:
-Input: nums = [1,2,3,4]
-Output: false
-Explanation: 
-There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition.
- 
-Constraints:
-nums.length == 2 * n
-1 <= n <= 500
-1 <= nums[i] <= 500
-*/
+/** 2206. Divide Array Into Equal Pairs
+ *
+ *https://leetcode.com/problems/divide-array-into-equal-pairs/
+ *
+ * Determines if an array can be divided into pairs of equal values
+ * @param {number[]} nums - Array of integers to be divided into pairs
+ * @returns {boolean} - True if array can be divided into equal pairs, false otherwise
+ *
+ * @example
+ * divideArray([1, 2, 2, 1]) // returns true
+ * divideArray([1, 2, 3, 4]) // returns false
+ * divideArray([2, 2, 2, 2]) // returns true
+ */
 
 function divideArray(nums) {
+  // Object to store frequency count of each number
   const obj = {};
+
+  // Initialize result with required number of pairs
+  // (half of array length)
   let result = nums.length / 2;
+
+  // Iterate through each number in the array
   for (const each of nums) {
+    // Increment count of current number
+    // If number doesn't exist in obj, initialize with 0
     obj[each] = (obj[each] || 0) + 1;
+
+    // If count becomes even, we found a pair
+    // Decrement result to track remaining pairs needed
     if (obj[each] % 2 === 0) result--;
   }
+
+  // If result is 0, all pairs were found
+  // Otherwise, not all numbers could be paired
   return result === 0;
 }
