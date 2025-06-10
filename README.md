@@ -1,1 +1,2 @@
-# leetcode
+# LeetCode
+Daily learning
